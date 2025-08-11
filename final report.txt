@@ -1,0 +1,32 @@
+Final Report – Network Traffic Capture and Analysis
+
+Objective:
+To capture live network traffic using Wireshark, filter by protocol, and identify at least three different types of network communication.
+
+Date of Capture: 11-Aug-2025
+Tool Used: Wireshark v4.x
+
+Protocols Identified
+HTTP (Hypertext Transfer Protocol)
+Purpose: Facilitates the transfer of web content between browsers and web servers.
+Observation: Captured GET and HTTP/1.1 response packets between local IP and remote web server, indicating normal web browsing activity.
+
+DNS (Domain Name System)
+Purpose: Translates human-readable domain names into IP addresses.
+Observation: Queries to a public DNS server (8.8.8.8) for domains such as google.com, followed by standard DNS response packets.
+
+TCP (Transmission Control Protocol)
+Purpose: Ensures reliable, ordered delivery of data between applications.
+Observation: Noted multiple three-way handshake sequences (SYN, SYN-ACK, ACK) and normal TCP data transfer segments used by both HTTP and DNS traffic.
+
+Summary of Findings
+Total packets captured: 17857  over approximately one minute of monitoring.
+The capture showed routine network behavior:
+
+HTTP for web browsing,
+
+DNS for hostname resolution,
+
+TCP as the transport layer protocol.
+All protocols displayed expected packet structures with no signs of errors or suspicious patterns.
+This confirms a healthy and normal operational state of the network during the capture period.
