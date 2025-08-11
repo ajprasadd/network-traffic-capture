@@ -1,45 +1,60 @@
-Project Overview
-This project involves capturing live network packets using Wireshark, identifying different network protocols, and analyzing their purpose and packet details. 
-The goal is to observe normal network behavior and understand how various protocols interact during typical internet usage.
+# Network Traffic Capture and Analysis
 
-Objectives
-Capture live network packets from the active network interface.
-Identify at least three different protocols in the captured traffic.
-Analyze packet details and summarize findings.
-Save the captured traffic as a .pcap file for documentation.
+📌 Project Overview
+This project demonstrates capturing live network packets using **Wireshark**, filtering them by protocol, and analyzing their details.  
+The purpose is to understand common network protocols and observe typical traffic patterns during normal internet usage.
 
-Tools Used
-Wireshark v4.x (Open-source network packet analyzer)
-Operating System: windows OS
+---
 
-Steps Followed
-Installed Wireshark on the system.
-Started packet capture on the active network interface (Wi-Fi/Ethernet).
+ 🎯 Objectives
+- Capture live network packets from the active network interface.
+- Identify at least **three different protocols**.
+- Analyze packet details and summarize observations.
+- Save the capture as a `.pcap` file for documentation.
 
-Generated network activity by:
-Browsing websites
-Performing a ping to a known server
-Stopped the capture after ~1 minute.
 
-Applied filters in Wireshark to identify specific protocols:
-HTTP (http)
-DNS (dns)
-TCP (tcp)
-Saved the capture as network_capture_task5.pcap.
-Analyzed and documented protocol details.
 
-Protocols Identified
-Protocol	Purpose	Observation in Capture
-HTTP	Transfers web content between client and server	GET request and HTTP response packets between local machine and remote web server
-DNS	Resolves domain names to IP addresses	DNS queries to 8.8.8.8 for google.com and related responses
-TCP	Provides reliable, ordered data transmission	Three-way handshake (SYN, SYN-ACK, ACK) and data packets for HTTP/DNS communication
+ 🛠 Tools Used
+- **Wireshark v4.x** (Open-source network packet analyzer)
+- Operating System: *[Your OS Name]*
+- Internet connection for generating traffic
 
-Summary
-Total Packets Captured: 17857
-Observed normal network behavior without anomalies.
-The TCP protocol was used as a transport layer for HTTP and DNS communications.
-No suspicious or malformed packets were found.
 
-Files Included
- Captured packet file
- Report summarizing analysis and findings
+
+ 📄 Steps Followed
+1. Installed Wireshark on the system.
+2. Started packet capture on the **active network interface** (Wi-Fi/Ethernet).
+3. Generated network activity by:
+   - Browsing websites
+   - Pinging a known server
+4. Stopped the capture after ~1 minute.
+5. Applied protocol filters in Wireshark:
+   - `http` → HTTP traffic
+   - `dns` → DNS queries/responses
+   - `tcp` → TCP packets
+6. Saved capture as **`network_capture_task5.pcap`**.
+7. Documented findings in a short report.
+
+---
+
+ 📡 Protocols Identified
+
+| Protocol | Purpose | Observation |
+|----------|---------|-------------|
+| **HTTP** | Transfers web content between client and server | Observed GET requests and HTTP/1.1 responses between local machine and remote server |
+| **DNS**  | Resolves domain names into IP addresses | Queries to `8.8.8.8` for `google.com` and corresponding responses |
+| **TCP**  | Ensures reliable, ordered data transfer | Observed TCP 3-way handshake (SYN, SYN-ACK, ACK) and segment data |
+
+
+ 📊 Summary
+- **Total Packets Captured:** 17857
+- Observed standard network behavior: HTTP for web browsing, DNS for name resolution, TCP as transport.
+- All packets appeared normal with no suspicious or malformed traffic.
+
+
+
+📂 Files in This Repository
+Captured packet file
+Summary report of findings
+This documentation file
+
